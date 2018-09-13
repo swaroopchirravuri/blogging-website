@@ -28,7 +28,14 @@ document.getElementById("commentButton").addEventListener("click", function(){
 });
 
 document.getElementById("likeButton").addEventListener("click", function(){
-    var likeCount = document.getElementsByClassName('likeCounter')[0].textContent;
+    var likeCount = document.getElementsByClassName('likeButton')[0].getAttribute('data-count');
     likeCount = parseInt(likeCount) + 1;
-    document.getElementsByClassName('likeCounter')[0].textContent = likeCount;
+    document.getElementsByClassName('likeButton')[0].innerHTML = "<i class='fa fa-thumbs-up'></i>Liked";
+    if(likeCount > 1){
+        document.getElementsByClassName('likeCounter')[0].innerHTML = likeCount + ' person likes this!';
+    }else if(likeCount == 1){
+        document.getElementsByClassName('likeCounter')[0].innerHTML = likeCount + ' have liked this!';
+    }
+
+    document.getElementsByClassName('likeButton')[0].setAttribute('data-count', likeCount);
 });

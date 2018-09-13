@@ -30,3 +30,26 @@
   border-color: #bd0f18;
 
 }
+button{
+  background-color: #ff0080;
+  color: white;
+  margin: 10px;
+  padding: 4px 16px;
+  border: 1px solid #ff0080;
+  cursor: pointer;
+
+}
+.innerComments p{
+  background-color: white;
+
+border: 1px solid grey;
+
+margin: 6px;
+
+padding: 12px;
+}
+.innerComments{
+  background-color: grey;
+  width: 56%;
+  padding: 10px;
+}

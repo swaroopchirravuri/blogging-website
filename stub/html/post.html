@@ -4,7 +4,8 @@
     <link href='..\css\post.css' rel='stylesheet' type='text/css'>
     <link href='..\css\header.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="..\font-awesome-4.7.0/css/font-awesome.min.css">
-    <link href='..\css\font.css' rel='stylesheet' type='text/css'>     
+    <link href='..\css\font.css' rel='stylesheet' type='text/css'> 
+    <title>Post</title>   
 </head>
 <body>
     <div class="header">
@@ -40,19 +41,23 @@
 
     <!-- Insert code for Like button, Comment button, Comment box here-->
     <div class="likeContainer">
-        <button type='button' value='Like' class='likeButton' id='likeButton'>
+        <button type='button' value='Like' class='likeButton' id='likeButton' data-count='0'>
             <i class='fa fa-thumbs-up'></i>
             Like
         </button>
-        <p class="likeCounter hide"></p>
+        <p class="likeCounter">Be the first one to like this!</p>
     </div>
 
     <div class="commentContainer">
-        <textarea class="commentText" name="textarea" rows="10" cols="100">Leave a comment...</textarea>
-        <input type="button" value="Comment" class="commentButton" id="commentButton">
+        <textarea class="commentText" name="textarea" rows="10" cols="100" placeholder="Leave a comment..."></textarea>
+        <button type='button' class="commentButton" id="commentButton">
+            Comment
+        </button>
     </div>
     <div class="commentsBlock">
+        All Comments
         <div class = "innerComments">
+
         </div>
     <div>
     

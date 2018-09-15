@@ -1,3 +1,6 @@
+.post{
+  padding:15px;
+}
 .blogTite {
     font-size: 150%;
     font-family: 'Abel', sans-serif;
@@ -21,7 +24,6 @@
 .likeContainer, .commentButton{
     display:block;
 }
-
 .editable {
   position: relative;
   border: 1px solid grey;
@@ -30,23 +32,23 @@
   border-color: #bd0f18;
 
 }
-button{
+.post button{
   background-color: #ff0080;
   color: white;
-  margin: 10px;
-  padding: 4px 16px;
+  margin: 5px;
+  padding: 7px 16px;
   border: 1px solid #ff0080;
   cursor: pointer;
-
+  border-radius:5px;
+}
+.savePost{
+  display: none;
 }
 .innerComments p{
   background-color: white;
-
-border: 1px solid grey;
-
-margin: 6px;
-
-padding: 12px;
+  border: 1px solid grey;
+  margin: 6px;
+  padding: 12px;
 }
 .innerComments{
   background-color: grey;

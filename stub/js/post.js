@@ -5,7 +5,9 @@ function editBody(){
     var blogBody = document.getElementById('blogBody');
     blogBody.setAttribute('contenteditable',true);
     blogTitle.setAttribute('class','editable');
-    blogBody.setAttribute('class','editable');    
+    blogBody.setAttribute('class','editable'); 
+    document.getElementsByClassName('savePost')[0].style.display = 'block';
+    document.getElementsByClassName('editPost')[0].style.display = 'none';   
 }
 
 function saveBody(){
@@ -15,6 +17,8 @@ function saveBody(){
     blogBody.setAttribute('contenteditable',false);
     blogTitle.removeAttribute('class','editable');
     blogBody.removeAttribute('class','editable');
+    document.getElementsByClassName('editPost')[0].style.display = 'block';
+    document.getElementsByClassName('savePost')[0].style.display = 'none';
 }
 
 document.getElementById("commentButton").addEventListener("click", function(){
@@ -23,18 +27,18 @@ document.getElementById("commentButton").addEventListener("click", function(){
     var comment = document.createElement("p");
     var commentNode = document.createTextNode(insertedComment);  
     comment.appendChild(commentNode);  
-    commentDiv.appendChild(comment);
+    commentDiv.insertBefore(comment, commentDiv.childNodes[0]);
     document.getElementsByClassName('commentText')[0].value = '';
 });
 
 document.getElementById("likeButton").addEventListener("click", function(){
     var likeCount = document.getElementsByClassName('likeButton')[0].getAttribute('data-count');
     likeCount = parseInt(likeCount) + 1;
-    document.getElementsByClassName('likeButton')[0].innerHTML = "<i class='fa fa-thumbs-up'></i>Liked";
-    if(likeCount > 1){
+    document.getElementsByClassName('likeButton')[0].innerHTML = "<i class='fa fa-thumbs-up'></i>Liked!";
+    if(likeCount == 1){
         document.getElementsByClassName('likeCounter')[0].innerHTML = likeCount + ' person likes this!';
     }else if(likeCount == 1){
-        document.getElementsByClassName('likeCounter')[0].innerHTML = likeCount + ' have liked this!';
+        document.getElementsByClassName('likeCounter')[0].innerHTML = likeCount + ' people have liked this!';
     }
 
     document.getElementsByClassName('likeButton')[0].setAttribute('data-count', likeCount);

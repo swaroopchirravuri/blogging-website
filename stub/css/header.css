@@ -11,7 +11,7 @@
     text-decoration: none;
     margin: 10px 10px 0px 10px;
 }
-button {
+.header button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -21,7 +21,7 @@ button {
     width: 100%;
     opacity: 0.9;
 }
-button:hover {
+.header button:hover {
     opacity:1;
 }
 input.topButtons {
@@ -37,4 +37,3 @@ input.topButtons {
     margin: 10px 10px 0px 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
-

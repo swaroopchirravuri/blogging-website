@@ -34,7 +34,7 @@
     font-size: 25px;
     height: 25px;
     }
-.post-more {
+.delPost, .post-more {
     float: right;
     cursor: pointer;
     font-size: 18px;
@@ -62,3 +62,51 @@ body {
     width: 100%;
 
 }
+ /* The Modal (background) */
+#postModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+.modalMsg{
+    color:#000;
+    text-align:center;
+}
+.modalButtons{
+    text-align:center;
+}
+#yesModalBtn{
+    background-color: red;
+    padding:10px 25px;
+    border: 1px solid green;
+    border-radius: 3px;
+    margin:10px;
+    color:#fff;
+    cursor: pointer;
+}
+#noModalBtn{
+    background-color: green;
+    padding:10px 25px;
+    border: 1px solid green;
+    border-radius: 3px;
+    margin:10px;
+    color:#fff;
+    cursor: pointer;
+}
+
